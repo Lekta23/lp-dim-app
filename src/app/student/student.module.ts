@@ -8,6 +8,7 @@ import { StudentListComponent } from './pages/student-list/student-list.componen
 import { StudentDetailsComponent } from './pages/student-details/student-details.component';
 import { StudentFormComponent } from './components/student-form/student-form.component';
 import { StudentService } from './services/student.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -15,12 +16,13 @@ import { StudentService } from './services/student.service';
     StudentComponent,
     StudentListComponent,
     StudentDetailsComponent,
-    StudentFormComponent
+    StudentFormComponent,
   ],
   imports: [
     CommonModule,
     StudentRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers:[
     StudentService
