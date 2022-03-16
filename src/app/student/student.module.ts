@@ -22,7 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
     CommonModule,
     StudentRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers:[
     StudentService

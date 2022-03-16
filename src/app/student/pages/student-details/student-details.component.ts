@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Student } from 'src/app/core/models/student';
+import { StudentService } from '../../services/student.service';
 
 @Component({
   selector: 'app-student-details',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student-details.component.scss']
 })
 export class StudentDetailsComponent implements OnInit {
+  
 
-  constructor() { }
+  constructor(private _studentService : StudentService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+
 
 }
