@@ -1,7 +1,7 @@
 <p>student-list works!</p>
 {{ students$ | async | json }}
 
-<table mat-table [dataSource]="students$" class="mat-elevation-z8 demo-table">
+<table mat-table [dataSource]="students$" class="mat-elevation-z8 demo-table" >
   <!-- Position Column -->
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> id </th>
@@ -24,8 +24,9 @@
         <th mat-header-cell *matHeaderCellDef> actions </th>
         <td mat-cell *matCellDef="let students$">
         <button mat-button (click)="deleteStudent(students$)">Delete</button>
+        <button mat-button><a [routerLink]="['/students', students$.id]">Details</a></button>
         </td>
     </ng-container>
   <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-  <tr mat-row *matRowDef="let students$; columns: columnsToDisplay;"></tr>
+  <tr mat-row *matRowDef="let student$; columns:columnsToDisplay ;"></tr>
 </table>

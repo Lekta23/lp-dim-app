@@ -38,8 +38,8 @@ export class StudentService {
     );
   }
 
-  deleteStudent(id: number): Observable<any> {
-    return this._http.delete(
+  deleteStudent(id: number): Observable<Student> {
+    return this._http.delete<Student>(
       `${environment.apiBaseUrl}${this.studentPath}/${id}`
     );
   }

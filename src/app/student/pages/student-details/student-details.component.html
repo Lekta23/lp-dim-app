@@ -1,1 +1,10 @@
 <p>student-details works!</p>
+<mat-card  class="flex-lg-20">
+    <mat-card-title-group>
+      <mat-card-title >{{student$}}</mat-card-title>
+      <mat-card-subtitle>{{student$}}</mat-card-subtitle>
+    </mat-card-title-group>
+    <mat-card-content>
+      {{ student$ | async | json }}
+    </mat-card-content>
+  </mat-card>

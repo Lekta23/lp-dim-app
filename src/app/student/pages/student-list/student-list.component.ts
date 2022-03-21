@@ -19,12 +19,17 @@ export class StudentListComponent implements OnInit {
     this.students$ = this._studentService.getStudents();
   }
 
-  deleteStudent(id: number) {
-    this._studentService.deleteStudent(id).subscribe(() => {
-      this.students$ = this._studentService.getStudents();
-    });
+
+ deleteStudent(student: Student)  {
+   console.log(student);
+   
+     this._studentService.deleteStudent(student.id).subscribe(
+        () => {
+          this.students$ = this._studentService.getStudents();
+        }
+     );
   }
 
-
+  
 
 }
